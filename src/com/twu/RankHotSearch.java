@@ -18,8 +18,8 @@ public class RankHotSearch {
 
     void run() {
         initData();
-
         Scanner scan = new Scanner(System.in);
+        System.out.println("默认用户有 ID分别为 1 2 3 4 5");
         while(true) {
             showMenu(isAdmin, curUser);
             System.out.println("\n");
@@ -53,7 +53,7 @@ public class RankHotSearch {
                             break;
                     }
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    System.out.println("操作失败： " + e.getMessage());
                 }
             }
             System.out.println("\n");
@@ -93,10 +93,6 @@ public class RankHotSearch {
     void showHotSearchList() {
         System.out.println("热搜排行版");
 
-//        ArrayList<HotSearch>  hotSearches1= hotSearches.getHotSearches();
-//        hotSearches1.forEach(item -> {
-//            System.out.println(hotSearches1.indexOf(item) + " " + item.getDesc() + " " + item.getHotValue());
-//        });
         RankHotSearchService.printRank(hotSearches);
 
         System.out.println(".........");

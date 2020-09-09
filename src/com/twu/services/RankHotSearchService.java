@@ -12,7 +12,7 @@ public class RankHotSearchService {
     public static void printRank(HotSearches hotSearches) {
         ArrayList<HotSearch> orderedHotSearcheList = hotSearches.getHotSearches();
         orderedHotSearcheList.forEach(item -> {
-            System.out.println(orderedHotSearcheList.indexOf(item) + 1 + " " + item.getDesc() + " " + item.getHotValue() + " " + "ID为" + item.getId());
+            System.out.println(orderedHotSearcheList.indexOf(item) + 1 + " " + item.getDesc() + " 热度为" + item.getHotValue() + " ID为" + item.getId());
         });
     }
 

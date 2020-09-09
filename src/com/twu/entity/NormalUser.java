@@ -49,7 +49,7 @@ public class NormalUser {
     }
 
     public void vote(Integer votesNumber) throws VoteNumberNotEnoughException {
-        if (this.votes - votesNumber < 0) throw new VoteNumberNotEnoughException();
+        if (this.votes - votesNumber < 0) throw new VoteNumberNotEnoughException("票数不足， 剩余票数为" + this.votes);
         this.votes -= votesNumber;
     }
 
